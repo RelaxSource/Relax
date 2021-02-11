@@ -1332,7 +1332,7 @@ return false
 end 
 if text == "فتح الدردشة" and msg.reply_to_message_id_ == 0 and Owner(msg) then 
 database:del(bot_id.."Relax:Lock:text"..msg.chat_id_)  
-Reply_Status(msg,msg.sender_user_id_,"unlock","- تم فتح الدردشة يحلوين .)  
+Reply_Status(msg,msg.sender_user_id_,"unlock","- تم فتح الدردشة يحلوين .")  
 return false
 end 
 if text == "فتح الدخول" and msg.reply_to_message_id_ == 0 and Addictive(msg) then 
