@@ -17,25 +17,25 @@ UserName = "]]..UserName..[["
 Relax_Info_Sudo:close()
 end  
 if not database:get(Server_Relax.."Token_Relax") then
-print("\27[1;34m»» اكتب توكن البوت :\27[m")
+print("\27[1;34m»» Write Bot Token => \27[m")
 local token = io.read()
 if token ~= '' then
 local url , res = https.request('https://api.telegram.org/bot'..token..'/getMe')
 if res ~= 200 then
-io.write('\n\27[1;31m»» التوكن خطأ عمري \n\27[0;39;49m')
+io.write('\n\27[1;31m»» False Token \n\27[0;39;49m')
 else
-io.write('\n\27[1;31m»» تم حفظ التوكن\n\27[0;39;49m')
+io.write('\n\27[1;31m»» Done Save Token\n\27[0;39;49m')
 database:set(Server_Relax.."Token_Relax",token)
 end 
 else
-io.write('\n\27[1;31mلم يتم حفظ التوكن\n\27[0;39;49m')
+io.write('\n\27[1;31m Token Didn't Save\n\27[0;39;49m')
 end 
 os.execute('lua start.lua')
 end
 ------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------
 if not database:get(Server_Relax.."UserName_Relax") then
-print("\27[1;34m\n»» اكتب معرف المطور : \27[m")
+print("\27[1;34m\n»» Write Sudo Username => \27[m")
 local UserName = io.read():gsub('@','')
 if UserName ~= '' then
 local Get_Info = http.request("http://tshake.ml/info/?user="..UserName)
@@ -45,20 +45,20 @@ return false
 end
 local Json = JSON:decode(Get_Info)
 if Json.Info == false then
-io.write('\n\27[1;31m»» المعرف خطأ \n\27[0;39;49m')
+io.write('\n\27[1;31m»» Error Username \n\27[0;39;49m')
 os.execute('lua start.lua')
 else
 if Json.Info == 'Channel' then
-io.write('\n\27[1;31m»» هذا معرف قناة قلبي \n\27[0;39;49m')
+io.write('\n\27[1;31m»» This Username in Channel \n\27[0;39;49m')
 os.execute('lua start.lua')
 else
-io.write('\n\27[1;31m»» تم حفظ المعرف\n\27[0;39;49m')
+io.write('\n\27[1;31m»» Done Save Username \n\27[0;39;49m')
 database:set(Server_Relax.."UserName_Relax",Json.Info.Username)
 database:set(Server_Relax.."Id_Relax",Json.Info.Id)
 end
 end
 else
-io.write('\n\27[1;31mلم يتم حفظ المعرف\n\27[0;39;49m')
+io.write('\n\27[1;31m Username Didn't Save\n\27[0;39;49m')
 end 
 os.execute('lua start.lua')
 end
@@ -71,7 +71,7 @@ RunRelax:write([[
 cd $HOME/Relax
 token="]]..database:get(Server_Relax.."Token_Relax")..[["
 rm -fr Relax.lua
-wget "https://raw.githubusercontent.com/RelaxSource/Relax/main/Relax.lua"
+wget "https://raw.githubusercontent.com/RelaxSource/Relax/master/Relax.lua"
 while(true) do
 rm -fr ../.telegram-cli
 ./tg -s ./Relax.lua -p PROFILE --bot=$token
