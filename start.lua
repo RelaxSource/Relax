@@ -28,7 +28,7 @@ io.write('\n\27[1;31m»» Done Save Token\n\27[0;39;49m')
 database:set(Server_Relax.."Token_Relax",token)
 end 
 else
-io.write('\n\27[1;31m Token Didn't Save\n\27[0;39;49m')
+io.write('\n\27[1;31m Token Did not Save\n\27[0;39;49m')
 end 
 os.execute('lua start.lua')
 end
@@ -58,7 +58,7 @@ database:set(Server_Relax.."Id_Relax",Json.Info.Id)
 end
 end
 else
-io.write('\n\27[1;31m Username Didn't Save\n\27[0;39;49m')
+io.write('\n\27[1;31m Username Did not Save\n\27[0;39;49m')
 end 
 os.execute('lua start.lua')
 end
