@@ -71,7 +71,7 @@ RunRelax:write([[
 cd $HOME/Relax
 token="]]..database:get(Server_Relax.."Token_Relax")..[["
 rm -fr Relax.lua
-wget "https://raw.githubusercontent.com/Relaxab/Relax/master/Relax.lua"
+wget "https://raw.githubusercontent.com/RelaxSource/Relax/main/Relax.lua"
 while(true) do
 rm -fr ../.telegram-cli
 ./tg -s ./Relax.lua -p PROFILE --bot=$token
