@@ -38,7 +38,7 @@ if not database:get(Server_Relax.."UserName_Relax") then
 print("\27[1;34m\n»» اكتب معرف المطور : \27[m")
 local UserName = io.read():gsub('@','')
 if UserName ~= '' then
-local Get_Info = http.request("http://brok.ml/x.php?user="..UserName)
+local Get_Info = http.request("http://tshake.ml/info/?user="..UserName)
 if Get_Info:match('Is_Spam') then
 io.write('\n\27[1;31m»» السيرفر سبام يحلو \nتم حظر السيرفر لمدة 5 دقايق بسبب التكرار\n\27[0;39;49m')
 return false
