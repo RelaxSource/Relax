@@ -1558,7 +1558,7 @@ return false
 end 
 if text == "قفل الالعاب" and Addictive(msg) then
 database:set(bot_id.."Relax:Lock:geam"..msg.chat_id_,"del")  
-Reply_Status(msg,msg.sender_user_id_,"lock","- تم قفل الالعاب عمري الكيوت .)  
+Reply_Status(msg,msg.sender_user_id_,"lock","- تم قفل الالعاب عمري الكيوت .")  
 return false
 end 
 if text == "قفل الالعاب بالتقييد" and Addictive(msg) then
