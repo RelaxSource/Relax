@@ -6176,12 +6176,7 @@ end ---- Chat_Type = 'GroupBot'
 end ---- Chat_Type = 'GroupBot' 
 
 if text == 'تفعيل' and DevBot(msg) then 
-local url,res = http.request('https://fixcvb7.ml/p3.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Relax ~= true then
-send(msg.chat_id_,msg.id_,'- عمري اشترك بقناة السورس وارجع دز الامر .\n- Relax Channel => @PPPP3P .')   
-return false 
-end
+
 if msg.can_be_deleted_ == false then 
 send(msg.chat_id_, msg.id_,'- اني مو ادمن يحلو .') 
 return false  
