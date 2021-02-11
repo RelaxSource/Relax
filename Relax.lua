@@ -5075,7 +5075,7 @@ local Status_Gps = Get_Rank(Id,msg.chat_id_)
 local message_edit = database:get(bot_id..'Relax:message_edit'..msg.chat_id_..data.id_) or 0
 local Num_Games = database:get(bot_id.."aaaZaa:Msg_User"..msg.chat_id_..":"..data.id_) or 0
 local Add_Mem = database:get(bot_id.."Relax:Add:Memp"..msg.chat_id_..":"..data.id_) or 0
-send(msg.chat_id_, msg.id_,'- ID ~ '..Id..'\n- Msgs ~ '..NumMsg..'\n- User ~ ['..UserName_User..']\n- interaction ~ '..TotalMsg..'\- Rank ~ '..Status_Gps..'\n- Edit Msgs ~ '..message_edit..'\n- Contacts - '..Add_Mem..'') 
+send(msg.chat_id_, msg.id_,'- ID ~ '..Id..'\n- Msgs ~ '..NumMsg..'\n- User ~ ['..UserName_User..']\n- interaction ~ '..TotalMsg..'\n- Rank ~ '..Status_Gps..'\n- Edit Msgs ~ '..message_edit..'\n- Contacts - '..Add_Mem..'') 
 end,nil)   
 else
 send(msg.chat_id_, msg.id_,'👤┇لا يوجد حساب بهاذا المعرف')
