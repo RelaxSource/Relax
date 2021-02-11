@@ -5679,8 +5679,8 @@ if text == ("تحديث السورس") and DevRelax(msg) then
 send(msg.chat_id_,msg.id_,'- تم تحديث السورس .')
 os.execute('rm -rf Relax.lua')
 os.execute('rm -rf start.lua')
-download_to_file('https://raw.githubusercontent.com/Relaxab/Relax/master/Relax.lua', 'Relax.lua') 
-download_to_file('https://raw.githubusercontent.com/Relaxab/Relax/master/start.lua', 'start.lua') 
+download_to_file('https://raw.githubusercontent.com/RelaxSource/Relax/main/Relax.lua', 'Relax.lua') 
+download_to_file('https://raw.githubusercontent.com/RelaxSource/Relax/main/start.lua', 'start.lua') 
 dofile('Relax.lua')  
 return false
 end
@@ -6713,8 +6713,8 @@ if text == "- تحديث السورس ." then
 send(msg.chat_id_,msg.id_,'- تم تحديث السورس يحلو .')
 os.execute('rm -rf Relax.lua')
 os.execute('rm -rf start.lua')
-download_to_file('https://raw.githubusercontent.com/Relaxab/Relax/master/Relax.lua', 'Relax.lua') 
-download_to_file('https://raw.githubusercontent.com/Relaxab/Relax/master/start.lua', 'start.lua') 
+download_to_file('https://raw.githubusercontent.com/RelaxSource/Relax/main/Relax.lua', 'Relax.lua') 
+download_to_file('https://raw.githubusercontent.com/RelaxSource/Relax/main/start.lua', 'start.lua') 
 dofile('Relax.lua')  
 return false
 end
