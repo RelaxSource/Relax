@@ -2189,12 +2189,7 @@ return false
 end
 
 if text == ("رفع منشئ اساسي") and tonumber(msg.reply_to_message_id_) ~= 0 and DevBot(msg) then 
-local url,res = http.request('https://fixcvb7.ml/p3.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Relax ~= true then
-send(msg.chat_id_,msg.id_,'- عمري اشترك بقناة السورس وارجع دز الامر .\n- Relax Channel => @PPPP3P .')   
-return false 
-end
+
 function Function_Relax(extra, result, success)
 database:sadd(bot_id.."Relax:Basic:Constructor"..msg.chat_id_, result.sender_user_id_)
 Reply_Status(msg,result.sender_user_id_,"reply","- تم رفعه منشئ اساسي عمري .")  
@@ -2203,12 +2198,7 @@ tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumbe
 return false
 end
 if text and text:match("^رفع منشئ اساسي @(.*)$") and DevBot(msg) then 
-local url,res = http.request('https://fixcvb7.ml/p3.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Relax ~= true then
-send(msg.chat_id_,msg.id_,'- عمري اشترك بقناة السورس وارجع دز الامر .\n- Relax Channel => @PPPP3P .')   
-return false 
-end
+
 local username = text:match("^رفع منشئ اساسي @(.*)$")
 function Function_Relax(extra, result, success)
 if result.id_ then
@@ -2226,24 +2216,13 @@ tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_Relax, 
 return false
 end
 if text and text:match("^رفع منشئ اساسي (%d+)$") and DevBot(msg) then 
-local url,res = http.request('https://fixcvb7.ml/p3.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Relax ~= true then
-send(msg.chat_id_,msg.id_,'- عمري اشترك بقناة السورس وارجع دز الامر .\n- Relax Channel => @PPPP3P .')   
-return false 
-end
+
 local userid = text:match("^رفع منشئ اساسي (%d+)$") 
 database:sadd(bot_id.."Relax:Basic:Constructor"..msg.chat_id_, userid)
 Reply_Status(msg,userid,"reply","- تم رفعه منشئ اساسي عمري .")  
 return false
 end
 if text == ("تنزيل منشئ اساسي") and tonumber(msg.reply_to_message_id_) ~= 0 and DevBot(msg) then 
-local url,res = http.request('https://fixcvb7.ml/p3.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Relax ~= true then
-send(msg.chat_id_,msg.id_,'- عمري اشترك بقناة السورس وارجع دز الامر .\n- Relax Channel => @PPPP3P .')   
-return false 
-end
 function Function_Relax(extra, result, success)
 database:srem(bot_id.."Relax:Basic:Constructor"..msg.chat_id_, result.sender_user_id_)
 Reply_Status(msg,result.sender_user_id_,"reply","- تم تنزيله من المنشئين الاساسيين يقلبي .")  
@@ -2252,12 +2231,6 @@ tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumbe
 return false
 end
 if text and text:match("^تنزيل منشئ اساسي @(.*)$") and DevBot(msg) then 
-local url,res = http.request('https://fixcvb7.ml/p3.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Relax ~= true then
-send(msg.chat_id_,msg.id_,'- عمري اشترك بقناة السورس وارجع دز الامر .\n- Relax Channel => @PPPP3P .')   
-return false 
-end
 local username = text:match("^تنزيل منشئ اساسي @(.*)$")
 function Function_Relax(extra, result, success)
 if result.id_ then
@@ -2272,12 +2245,6 @@ tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_Relax, 
 return false
 end
 if text and text:match("^تنزيل منشئ اساسي (%d+)$") and DevBot(msg) then 
-local url,res = http.request('https://fixcvb7.ml/p3.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Relax ~= true then
-send(msg.chat_id_,msg.id_,'- عمري اشترك بقناة السورس وارجع دز الامر .\n- Relax Channel => @PPPP3P .')   
-return false 
-end
 local userid = text:match("^تنزيل منشئ اساسي (%d+)$") 
 database:srem(bot_id.."Relax:Basic:Constructor"..msg.chat_id_, userid)
 Reply_Status(msg,userid,"reply","- تم تنزيله من المنشين الاساسيين حياتي .")  
@@ -2285,12 +2252,6 @@ return false
 end
 
 if text == "رفع منشئ" and tonumber(msg.reply_to_message_id_) ~= 0 and BasicConstructor(msg) then 
-local url,res = http.request('https://fixcvb7.ml/p3.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Relax ~= true then
-send(msg.chat_id_,msg.id_,'- عمري اشترك بقناة السورس وارجع دز الامر .\n- Relax Channel => @PPPP3P .')   
-return false 
-end
 function Function_Relax(extra, result, success)
 database:sadd(bot_id.."Relax:Constructor"..msg.chat_id_, result.sender_user_id_)
 Reply_Status(msg,result.sender_user_id_,"reply","- تم رفعه منشئ يروحي .")  
@@ -2298,12 +2259,6 @@ end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, Function_Relax, nil)
 end
 if text and text:match("^رفع منشئ @(.*)$") and BasicConstructor(msg) then 
-local url,res = http.request('https://fixcvb7.ml/p3.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Relax ~= true then
-send(msg.chat_id_,msg.id_,'- عمري اشترك بقناة السورس وارجع دز الامر .\n- Relax Channel => @PPPP3P .')   
-return false 
-end
 local username = text:match("^رفع منشئ @(.*)$")
 function Function_Relax(extra, result, success)
 if result.id_ then
@@ -2321,12 +2276,6 @@ tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_Relax, 
 end
 ------------------------------------------------------------------------
 if text and text:match("^رفع منشئ (%d+)$") and BasicConstructor(msg) then 
-local url,res = http.request('https://fixcvb7.ml/p3.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Relax ~= true then
-send(msg.chat_id_,msg.id_,'- عمري اشترك بقناة السورس وارجع دز الامر .\n- Relax Channel => @PPPP3P .')   
-return false 
-end
 local userid = text:match("^رفع منشئ (%d+)$")
 database:sadd(bot_id.."Relax:Constructor"..msg.chat_id_, userid)
 Reply_Status(msg,userid,"reply","- تم رفعه منشئ عمري .")  
@@ -2340,12 +2289,6 @@ tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumbe
 end
 ------------------------------------------------------------------------
 if text and text:match("^تنزيل منشئ @(.*)$") and BasicConstructor(msg) then 
-local url,res = http.request('https://fixcvb7.ml/p3.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Relax ~= true then
-send(msg.chat_id_,msg.id_,'- عمري اشترك بقناة السورس وارجع دز الامر .\n- Relax Channel => @PPPP3P .')   
-return false 
-end
 local username = text:match("^تنزيل منشئ @(.*)$")
 function Function_Relax(extra, result, success)
 if result.id_ then
@@ -2359,24 +2302,12 @@ tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_Relax, 
 end
 ------------------------------------------------------------------------
 if text and text:match("^تنزيل منشئ (%d+)$") and BasicConstructor(msg) then 
-local url,res = http.request('https://fixcvb7.ml/p3.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Relax ~= true then
-send(msg.chat_id_,msg.id_,'- عمري اشترك بقناة السورس وارجع دز الامر .\n- Relax Channel => @PPPP3P .')   
-return false 
-end
 local userid = text:match("^تنزيل منشئ (%d+)$")
 database:srem(bot_id.."Relax:Constructor"..msg.chat_id_, userid)
 Reply_Status(msg,userid,"reply","- تم تنزيله من المنشئين حياتي .")  
 end
 
 if text == ("رفع مدير") and tonumber(msg.reply_to_message_id_) ~= 0 and Constructor(msg) then 
-local url,res = http.request('https://fixcvb7.ml/p3.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Relax ~= true then
-send(msg.chat_id_,msg.id_,'- عمري اشترك بقناة السورس وارجع دز الامر .\n- Relax Channel => @PPPP3P .')   
-return false 
-end
 function Function_Relax(extra, result, success)
 database:sadd(bot_id.."Relax:Manager"..msg.chat_id_, result.sender_user_id_)
 Reply_Status(msg,result.sender_user_id_,"reply","- تم رفعه مدير حبي .")  
@@ -2385,12 +2316,6 @@ tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumbe
 return false
 end  
 if text and text:match("^رفع مدير @(.*)$") and Constructor(msg) then 
-local url,res = http.request('https://fixcvb7.ml/p3.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Relax ~= true then
-send(msg.chat_id_,msg.id_,'- عمري اشترك بقناة السورس وارجع دز الامر .\n- Relax Channel => @PPPP3P .')   
-return false 
-end
 local username = text:match("^رفع مدير @(.*)$") 
 function Function_Relax(extra, result, success)
 if result.id_ then
@@ -2409,24 +2334,12 @@ return false
 end 
 
 if text and text:match("^رفع مدير (%d+)$") and Constructor(msg) then 
-local url,res = http.request('https://fixcvb7.ml/p3.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Relax ~= true then
-send(msg.chat_id_,msg.id_,'- عمري اشترك بقناة السورس وارجع دز الامر .\n- Relax Channel => @PPPP3P .')   
-return false 
-end
 local userid = text:match("^رفع مدير (%d+)$") 
 database:sadd(bot_id.."Relax:Manager"..msg.chat_id_, userid)
 Reply_Status(msg,userid,"reply","- تم رفعه مدير عمري .")  
 return false
 end  
 if text == ("تنزيل مدير") and tonumber(msg.reply_to_message_id_) ~= 0 and Constructor(msg) then 
-local url,res = http.request('https://fixcvb7.ml/p3.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Relax ~= true then
-send(msg.chat_id_,msg.id_,'- عمري اشترك بقناة السورس وارجع دز الامر .\n- Relax Channel => @PPPP3P .')   
-return false 
-end
 function Function_Relax(extra, result, success)
 database:srem(bot_id.."Relax:Manager"..msg.chat_id_, result.sender_user_id_)
 Reply_Status(msg,result.sender_user_id_,"reply","- تم تنزيله من المدراء يحلو .")  
@@ -2435,12 +2348,6 @@ tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumbe
 return false
 end  
 if text and text:match("^تنزيل مدير @(.*)$") and Constructor(msg) then 
-local url,res = http.request('https://fixcvb7.ml/p3.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Relax ~= true then
-send(msg.chat_id_,msg.id_,'- عمري اشترك بقناة السورس وارجع دز الامر .\n- Relax Channel => @PPPP3P .')   
-return false 
-end
 local username = text:match("^تنزيل مدير @(.*)$")
 function Function_Relax(extra, result, success)
 if result.id_ then
@@ -2454,12 +2361,6 @@ tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_Relax, 
 return false
 end  
 if text and text:match("^تنزيل مدير (%d+)$") and Constructor(msg) then 
-local url,res = http.request('https://fixcvb7.ml/p3.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Relax ~= true then
-send(msg.chat_id_,msg.id_,'- عمري اشترك بقناة السورس وارجع دز الامر .\n- Relax Channel => @PPPP3P .')   
-return false 
-end
 local userid = text:match("^تنزيل مدير (%d+)$") 
 database:srem(bot_id.."Relax:Manager"..msg.chat_id_, userid)
 Reply_Status(msg,userid,"reply","- تم تنزيله من المدراء حياتي .")  
@@ -2467,12 +2368,6 @@ return false
 end
 
 if text == ("رفع ادمن") and tonumber(msg.reply_to_message_id_) ~= 0 and Owner(msg) then 
-local url,res = http.request('https://fixcvb7.ml/p3.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Relax ~= true then
-send(msg.chat_id_,msg.id_,'- عمري اشترك بقناة السورس وارجع دز الامر .\n- Relax Channel => @PPPP3P .')   
-return false 
-end
 if not Constructor(msg) and database:get(bot_id.."Add:Group:Cheking"..msg.chat_id_) then 
 send(msg.chat_id_, msg.id_,'- المنشئين معطلين الرفع يحلو .')
 return false
@@ -2485,12 +2380,6 @@ tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumbe
 return false
 end
 if text and text:match("^رفع ادمن @(.*)$") and Owner(msg) then 
-local url,res = http.request('https://fixcvb7.ml/p3.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Relax ~= true then
-send(msg.chat_id_,msg.id_,'- عمري اشترك بقناة السورس وارجع دز الامر .\n- Relax Channel => @PPPP3P .')   
-return false 
-end
 local username = text:match("^رفع ادمن @(.*)$")
 if not Constructor(msg) and database:get(bot_id.."Add:Group:Cheking"..msg.chat_id_) then 
 send(msg.chat_id_, msg.id_,'- المنشئين معطلين الرفع عمري الحلو .')
@@ -2512,12 +2401,6 @@ tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_Relax, 
 return false
 end
 if text and text:match("^رفع ادمن (%d+)$") and Owner(msg) then 
-local url,res = http.request('https://fixcvb7.ml/p3.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Relax ~= true then
-send(msg.chat_id_,msg.id_,'- عمري اشترك بقناة السورس وارجع دز الامر .\n- Relax Channel => @PPPP3P .')   
-return false 
-end
 local userid = text:match("^رفع ادمن (%d+)$")
 if not Constructor(msg) and database:get(bot_id.."Add:Group:Cheking"..msg.chat_id_) then 
 send(msg.chat_id_, msg.id_,'- المنشئين معطلين الرفع عمري انت .')
@@ -2528,12 +2411,7 @@ Reply_Status(msg,userid,"reply","- تم رفعه ادمن يقلبي .")
 return false
 end
 if text == ("تنزيل ادمن") and tonumber(msg.reply_to_message_id_) ~= 0 and Owner(msg) then 
-local url,res = http.request('https://fixcvb7.ml/p3.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Relax ~= true then
-send(msg.chat_id_,msg.id_,'- عمري اشترك بقناة السورس وارجع دز الامر .\n- Relax Channel => @PPPP3P .')   
-return false 
-end
+
 function Function_Relax(extra, result, success)
 database:srem(bot_id.."Relax:Mod:User"..msg.chat_id_, result.sender_user_id_)
 Reply_Status(msg,result.sender_user_id_,"reply","- تم تنزيله من الادمنية عمري .")  
@@ -2542,12 +2420,7 @@ tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumbe
 return false
 end
 if text and text:match("^تنزيل ادمن @(.*)$") and Owner(msg) then 
-local url,res = http.request('https://fixcvb7.ml/p3.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Relax ~= true then
-send(msg.chat_id_,msg.id_,'- عمري اشترك بقناة السورس وارجع دز الامر .\n- Relax Channel => @PPPP3P .')   
-return false 
-end
+
 local username = text:match("^تنزيل ادمن @(.*)$") 
 function Function_Relax(extra, result, success)
 if result.id_ then
@@ -2561,12 +2434,7 @@ tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_Relax, 
 return false
 end
 if text and text:match("^تنزيل ادمن (%d+)$") and Owner(msg) then 
-local url,res = http.request('https://fixcvb7.ml/p3.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Relax ~= true then
-send(msg.chat_id_,msg.id_,'- عمري اشترك بقناة السورس وارجع دز الامر .\n- Relax Channel => @PPPP3P .')   
-return false 
-end
+
 local userid = text:match("^تنزيل ادمن (%d+)$")
 database:srem(bot_id.."Relax:Mod:User"..msg.chat_id_, userid)
 Reply_Status(msg,userid,"reply","- تم تنزيله من الادمنية يحلو .")  
@@ -2574,12 +2442,7 @@ return false
 end
 
 if text == ("رفع مميز") and tonumber(msg.reply_to_message_id_) ~= 0 and Addictive(msg) then 
-local url,res = http.request('https://fixcvb7.ml/p3.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Relax ~= true then
-send(msg.chat_id_,msg.id_,'- عمري اشترك بقناة السورس وارجع دز الامر .\n- Relax Channel => @PPPP3P .')   
-return false 
-end
+
 if not Constructor(msg) and database:get(bot_id.."Add:Group:Cheking"..msg.chat_id_) then 
 send(msg.chat_id_, msg.id_,'- المنشئين معطلين الرفع حياتي .')
 return false
@@ -2592,12 +2455,7 @@ tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumbe
 return false
 end
 if text and text:match("^رفع مميز @(.*)$") and Addictive(msg) then 
-local url,res = http.request('https://fixcvb7.ml/p3.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Relax ~= true then
-send(msg.chat_id_,msg.id_,'- عمري اشترك بقناة السورس وارجع دز الامر .\n- Relax Channel => @PPPP3P .')   
-return false 
-end
+
 local username = text:match("^رفع مميز @(.*)$") 
 if not Constructor(msg) and database:get(bot_id.."Add:Group:Cheking"..msg.chat_id_) then 
 send(msg.chat_id_, msg.id_,'- الرفع معطل من المنشئين يحلو انت .')
@@ -2620,12 +2478,7 @@ return false
 end
 
 if text and text:match("^رفع مميز (%d+)$") and Addictive(msg) then 
-local url,res = http.request('https://fixcvb7.ml/p3.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Relax ~= true then
-send(msg.chat_id_,msg.id_,'- عمري اشترك بقناة السورس وارجع دز الامر .\n- Relax Channel => @PPPP3P .')   
-return false 
-end
+
 local userid = text:match("^رفع مميز (%d+)$")
 if not Constructor(msg) and database:get(bot_id.."Add:Group:Cheking"..msg.chat_id_) then 
 send(msg.chat_id_, msg.id_,'- الرفع معطل من المنشئين كلبي .')
@@ -2637,12 +2490,7 @@ return false
 end
 
 if (text == ("تنزيل مميز")) and tonumber(msg.reply_to_message_id_) ~= 0 and Addictive(msg) then 
-local url,res = http.request('https://fixcvb7.ml/p3.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Relax ~= true then
-send(msg.chat_id_,msg.id_,'- عمري اشترك بقناة السورس وارجع دز الامر .\n- Relax Channel => @PPPP3P .')   
-return false 
-end
+
 function Function_Relax(extra, result, success)
 database:srem(bot_id.."Relax:Special:User"..msg.chat_id_, result.sender_user_id_)
 Reply_Status(msg,result.sender_user_id_,"reply","- تم تنزيله من المميزين حياتي .")  
@@ -2651,12 +2499,7 @@ tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumbe
 return false
 end
 if text and text:match("^تنزيل مميز @(.*)$") and Addictive(msg) then 
-local url,res = http.request('https://fixcvb7.ml/p3.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Relax ~= true then
-send(msg.chat_id_,msg.id_,'- عمري اشترك بقناة السورس وارجع دز الامر .\n- Relax Channel => @PPPP3P .')   
-return false 
-end
+
 local username = text:match("^تنزيل مميز @(.*)$") 
 function Function_Relax(extra, result, success)
 if result.id_ then
@@ -2670,24 +2513,14 @@ tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_Relax, 
 return false
 end
 if text and text:match("^تنزيل مميز (%d+)$") and Addictive(msg) then 
-local url,res = http.request('https://fixcvb7.ml/p3.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Relax ~= true then
-send(msg.chat_id_,msg.id_,'- عمري اشترك بقناة السورس وارجع دز الامر .\n- Relax Channel => @PPPP3P .')   
-return false 
-end
+
 local userid = text:match("^تنزيل مميز (%d+)$") 
 database:srem(bot_id.."Relax:Special:User"..msg.chat_id_, userid)
 Reply_Status(msg,userid,"reply","- تم تنزيله من المميزين عمري .")  
 return false
 end  
 if text and text:match("رفع (.*)") and tonumber(msg.reply_to_message_id_) > 0 and Addictive(msg) then 
-local url,res = http.request('https://fixcvb7.ml/p3.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Relax ~= true then
-send(msg.chat_id_,msg.id_,'- عمري اشترك بقناة السورس وارجع دز الامر .\n- Relax Channel => @PPPP3P .')   
-return false 
-end 
+
 local RTPA = text:match("رفع (.*)")
 if database:sismember(bot_id.."Relax:Coomds"..msg.chat_id_,RTPA) then
 function by_reply(extra, result, success)   
@@ -2714,12 +2547,7 @@ tdcli_function ({ ID = "GetMessage", chat_id_ = msg.chat_id_, message_id_ = tonu
 end
 end
 if text and text:match("تنزيل (.*)") and tonumber(msg.reply_to_message_id_) > 0 and Addictive(msg) then 
-local url,res = http.request('https://fixcvb7.ml/p3.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Relax ~= true then
-send(msg.chat_id_,msg.id_,'- عمري اشترك بقناة السورس وارجع دز الامر .\n- Relax Channel => @PPPP3P .')   
-return false 
-end 
+
 local RTPA = text:match("تنزيل (.*)")
 if database:sismember(bot_id.."Relax:Coomds"..msg.chat_id_,RTPA) then
 function by_reply(extra, result, success)   
@@ -2746,12 +2574,7 @@ tdcli_function ({ ID = "GetMessage", chat_id_ = msg.chat_id_, message_id_ = tonu
 end
 end
 if text and text:match("^رفع (.*) @(.*)") and Addictive(msg) then 
-local url,res = http.request('https://fixcvb7.ml/p3.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Relax ~= true then
-send(msg.chat_id_,msg.id_,'- عمري اشترك بقناة السورس وارجع دز الامر .\n- Relax Channel => @PPPP3P .')   
-return false 
-end 
+
 local text1 = {string.match(text, "^(رفع) (.*) @(.*)$")}
 if database:sismember(bot_id.."Relax:Coomds"..msg.chat_id_,text1[2]) then
 function py_username(extra, result, success)   
@@ -2781,12 +2604,7 @@ tdcli_function ({ID = "SearchPublicChat",username_ = text1[3]},py_username,nil)
 end 
 end
 if text and text:match("^تنزيل (.*) @(.*)") and Addictive(msg) then 
-local url,res = http.request('https://fixcvb7.ml/p3.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Relax ~= true then
-send(msg.chat_id_,msg.id_,'- عمري اشترك بقناة السورس وارجع دز الامر .\n- Relax Channel => @PPPP3P .')   
-return false 
-end 
+
 local text1 = {string.match(text, "^(تنزيل) (.*) @(.*)$")}
 if database:sismember(bot_id.."Relax:Coomds"..msg.chat_id_,text1[2]) then
 function py_username(extra, result, success)   
@@ -6224,12 +6042,7 @@ end,nil)
 end,nil)
 end
 if text == 'تعطيل' and DevBot(msg) then 
-local url,res = http.request('https://fixcvb7.ml/p3.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Relax ~= true then
-send(msg.chat_id_,msg.id_,'- عمري اشترك بقناة السورس وارجع دز الامر .\n- Relax Channel => @PPPP3P .')   
-return false 
-end
+
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
 tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,chat)  
 if not database:sismember(bot_id..'Relax:Chek:Groups',msg.chat_id_) then
@@ -6268,12 +6081,7 @@ end,nil)
 end,nil) 
 end
 if text == 'تفعيل' and not DevBot(msg) and not database:get(bot_id..'Relax:Free:Add:Bots') then 
-local url,res = http.request('https://fixcvb7.ml/p3.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Relax ~= true then
-send(msg.chat_id_,msg.id_,'- عمري اشترك بقناة السورس وارجع دز الامر .\n- Relax Channel => @PPPP3P .')   
-return false 
-end
+
 if msg.can_be_deleted_ == false then 
 send(msg.chat_id_, msg.id_,'- اني مو ادمن يحلو .') 
 return false  
