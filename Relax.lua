@@ -3061,7 +3061,7 @@ send(msg.chat_id_, msg.id_, "\n- حياتي متكدر تقيد او تكتم ا
 return false 
 end      
 https.request("https://api.telegram.org/bot"..token.."/restrictChatMember?chat_id="..msg.chat_id_.."&user_id="..result.id_)
-Reply_Status(msg,result.id_,"reply","- تم تقييده يحلو .)  
+Reply_Status(msg,result.id_,"reply","- تم تقييده يحلو .")  
 else
 send(msg.chat_id_, msg.id_,"- مكو هيج حساب يقلبي .")
 end
